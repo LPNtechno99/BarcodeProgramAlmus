@@ -18,7 +18,7 @@ namespace Almus_BacodeProgram
         IUserControl userControlAdmin;
         IUserControl userControlMaster;
         IUserControl userControlScanning;
-        UserControl_Scanning_New userControlScanningNew;
+        IUserControl userControlScanningNew;
         IUserControl userControlConfig;
         IUserControl userControlFunction;
         IUserControl userControlViewDB;
@@ -66,7 +66,7 @@ namespace Almus_BacodeProgram
                 case "nodeScanning":
                     {
                         this.Panel_ControlRight.Controls.Clear();
-                        this.Panel_ControlRight.Controls.Add(userControlScanning as UserControl);
+                        this.Panel_ControlRight.Controls.Add(userControlScanningNew as UserControl);
                         break;
                     }
                 case "nodeSettingConfigs":

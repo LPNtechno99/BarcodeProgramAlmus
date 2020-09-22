@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSerialScanData = new System.Windows.Forms.TextBox();
+            this.txtUnitBox = new System.Windows.Forms.TextBox();
+            this.txtSkuScanData = new System.Windows.Forms.TextBox();
+            this.cbbCarton = new System.Windows.Forms.ComboBox();
+            this.cbbMiddle = new System.Windows.Forms.ComboBox();
+            this.cbbMaster = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,24 +50,14 @@
             this.txtUnitPerCarton = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lblFail = new System.Windows.Forms.Label();
-            this.lblPass = new System.Windows.Forms.Label();
+            this.btnPassFail = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblUnitBoxNumber = new System.Windows.Forms.Label();
-            this.cbbMaster = new System.Windows.Forms.ComboBox();
-            this.cbbMiddle = new System.Windows.Forms.ComboBox();
-            this.cbbCarton = new System.Windows.Forms.ComboBox();
             this.lblTestCount = new System.Windows.Forms.Label();
-            this.txtSkuScanData = new System.Windows.Forms.TextBox();
-            this.txtSerialScanData = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblMiddleBoxNumber = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +66,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.txtSerialScanData);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtUnitBox);
             this.groupBox1.Controls.Add(this.txtSkuScanData);
             this.groupBox1.Controls.Add(this.cbbCarton);
             this.groupBox1.Controls.Add(this.cbbMiddle);
@@ -84,10 +80,66 @@
             this.groupBox1.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1023, 363);
+            this.groupBox1.Size = new System.Drawing.Size(1023, 355);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SCAN INFOMATION";
+            // 
+            // txtSerialScanData
+            // 
+            this.txtSerialScanData.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSerialScanData.Location = new System.Drawing.Point(318, 289);
+            this.txtSerialScanData.Name = "txtSerialScanData";
+            this.txtSerialScanData.Size = new System.Drawing.Size(620, 40);
+            this.txtSerialScanData.TabIndex = 3;
+            this.txtSerialScanData.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSerialScanData_KeyUp);
+            // 
+            // txtUnitBox
+            // 
+            this.txtUnitBox.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.txtUnitBox.Location = new System.Drawing.Point(267, 84);
+            this.txtUnitBox.Name = "txtUnitBox";
+            this.txtUnitBox.Size = new System.Drawing.Size(671, 40);
+            this.txtUnitBox.TabIndex = 3;
+            // 
+            // txtSkuScanData
+            // 
+            this.txtSkuScanData.BackColor = System.Drawing.Color.White;
+            this.txtSkuScanData.Location = new System.Drawing.Point(318, 240);
+            this.txtSkuScanData.Name = "txtSkuScanData";
+            this.txtSkuScanData.Size = new System.Drawing.Size(620, 40);
+            this.txtSkuScanData.TabIndex = 3;
+            this.txtSkuScanData.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSkuScanData_KeyUp);
+            // 
+            // cbbCarton
+            // 
+            this.cbbCarton.BackColor = System.Drawing.Color.Lavender;
+            this.cbbCarton.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCarton.FormattingEnabled = true;
+            this.cbbCarton.Location = new System.Drawing.Point(267, 182);
+            this.cbbCarton.Name = "cbbCarton";
+            this.cbbCarton.Size = new System.Drawing.Size(671, 41);
+            this.cbbCarton.TabIndex = 2;
+            // 
+            // cbbMiddle
+            // 
+            this.cbbMiddle.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.cbbMiddle.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMiddle.FormattingEnabled = true;
+            this.cbbMiddle.Location = new System.Drawing.Point(267, 135);
+            this.cbbMiddle.Name = "cbbMiddle";
+            this.cbbMiddle.Size = new System.Drawing.Size(671, 41);
+            this.cbbMiddle.TabIndex = 2;
+            // 
+            // cbbMaster
+            // 
+            this.cbbMaster.BackColor = System.Drawing.Color.Tomato;
+            this.cbbMaster.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaster.FormattingEnabled = true;
+            this.cbbMaster.Location = new System.Drawing.Point(267, 37);
+            this.cbbMaster.Name = "cbbMaster";
+            this.cbbMaster.Size = new System.Drawing.Size(671, 41);
+            this.cbbMaster.TabIndex = 2;
             // 
             // label9
             // 
@@ -159,10 +211,10 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtUnitPerCarton);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 383);
+            this.groupBox2.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(13, 375);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1023, 112);
+            this.groupBox2.Size = new System.Drawing.Size(1023, 102);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INSPECTION COUNT SETTING";
@@ -171,17 +223,18 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.LimeGreen;
             this.btnStart.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(837, 20);
+            this.btnStart.Location = new System.Drawing.Point(837, 16);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(180, 86);
+            this.btnStart.Size = new System.Drawing.Size(180, 80);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // txtMiddlePerCarton
             // 
             this.txtMiddlePerCarton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddlePerCarton.Location = new System.Drawing.Point(697, 47);
+            this.txtMiddlePerCarton.Location = new System.Drawing.Point(697, 44);
             this.txtMiddlePerCarton.Name = "txtMiddlePerCarton";
             this.txtMiddlePerCarton.Size = new System.Drawing.Size(114, 26);
             this.txtMiddlePerCarton.TabIndex = 1;
@@ -191,7 +244,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(552, 50);
+            this.label15.Location = new System.Drawing.Point(552, 47);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(139, 19);
             this.label15.TabIndex = 0;
@@ -200,7 +253,7 @@
             // txtUnitPerMiddle
             // 
             this.txtUnitPerMiddle.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnitPerMiddle.Location = new System.Drawing.Point(412, 47);
+            this.txtUnitPerMiddle.Location = new System.Drawing.Point(412, 44);
             this.txtUnitPerMiddle.Name = "txtUnitPerMiddle";
             this.txtUnitPerMiddle.Size = new System.Drawing.Size(117, 26);
             this.txtUnitPerMiddle.TabIndex = 1;
@@ -210,7 +263,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(290, 50);
+            this.label14.Location = new System.Drawing.Point(290, 47);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(112, 19);
             this.label14.TabIndex = 0;
@@ -220,7 +273,7 @@
             // 
             this.txtUnitPerCarton.BackColor = System.Drawing.Color.DarkGray;
             this.txtUnitPerCarton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnitPerCarton.Location = new System.Drawing.Point(148, 47);
+            this.txtUnitPerCarton.Location = new System.Drawing.Point(148, 44);
             this.txtUnitPerCarton.Name = "txtUnitPerCarton";
             this.txtUnitPerCarton.ReadOnly = true;
             this.txtUnitPerCarton.Size = new System.Drawing.Size(118, 26);
@@ -231,7 +284,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(24, 50);
+            this.label13.Location = new System.Drawing.Point(24, 47);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(118, 19);
             this.label13.TabIndex = 0;
@@ -240,158 +293,71 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox3.Controls.Add(this.groupBox6);
+            this.groupBox3.Controls.Add(this.btnPassFail);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 501);
+            this.groupBox3.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(13, 483);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1023, 215);
+            this.groupBox3.Size = new System.Drawing.Size(1023, 252);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "COUNT INFOMATION";
             // 
-            // groupBox6
+            // btnPassFail
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.lblFail);
-            this.groupBox6.Controls.Add(this.lblPass);
-            this.groupBox6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(718, 51);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(266, 158);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(125, 74);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(24, 30);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "/";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFail
-            // 
-            this.lblFail.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFail.ForeColor = System.Drawing.Color.Red;
-            this.lblFail.Location = new System.Drawing.Point(144, 74);
-            this.lblFail.Name = "lblFail";
-            this.lblFail.Size = new System.Drawing.Size(107, 30);
-            this.lblFail.TabIndex = 0;
-            this.lblFail.Text = "FAIL(0)";
-            this.lblFail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPass
-            // 
-            this.lblPass.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(16, 74);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(103, 30);
-            this.lblPass.TabIndex = 0;
-            this.lblPass.Text = "PASS(0)";
-            this.lblPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPassFail.BackColor = System.Drawing.Color.LavenderBlush;
+            this.btnPassFail.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassFail.Location = new System.Drawing.Point(733, 20);
+            this.btnPassFail.Name = "btnPassFail";
+            this.btnPassFail.Size = new System.Drawing.Size(284, 226);
+            this.btnPassFail.TabIndex = 1;
+            this.btnPassFail.Text = "PASS(0) / FAIL(0)";
+            this.btnPassFail.UseVisualStyleBackColor = false;
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
             this.groupBox5.Controls.Add(this.lblTestCount);
-            this.groupBox5.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(376, 51);
+            this.groupBox5.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(376, 41);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(257, 158);
+            this.groupBox5.Size = new System.Drawing.Size(257, 205);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TEST COUNT";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.lblUnitBoxNumber);
-            this.groupBox4.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(23, 51);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(257, 158);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "UNIT BOX NUMBER";
-            // 
-            // lblUnitBoxNumber
-            // 
-            this.lblUnitBoxNumber.Font = new System.Drawing.Font("Corbel", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitBoxNumber.Location = new System.Drawing.Point(29, 11);
-            this.lblUnitBoxNumber.Name = "lblUnitBoxNumber";
-            this.lblUnitBoxNumber.Size = new System.Drawing.Size(184, 134);
-            this.lblUnitBoxNumber.TabIndex = 0;
-            this.lblUnitBoxNumber.Text = "0";
-            this.lblUnitBoxNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbbMaster
-            // 
-            this.cbbMaster.BackColor = System.Drawing.Color.Tomato;
-            this.cbbMaster.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaster.FormattingEnabled = true;
-            this.cbbMaster.Location = new System.Drawing.Point(267, 37);
-            this.cbbMaster.Name = "cbbMaster";
-            this.cbbMaster.Size = new System.Drawing.Size(671, 41);
-            this.cbbMaster.TabIndex = 2;
-            // 
-            // cbbMiddle
-            // 
-            this.cbbMiddle.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.cbbMiddle.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMiddle.FormattingEnabled = true;
-            this.cbbMiddle.Location = new System.Drawing.Point(267, 135);
-            this.cbbMiddle.Name = "cbbMiddle";
-            this.cbbMiddle.Size = new System.Drawing.Size(671, 41);
-            this.cbbMiddle.TabIndex = 2;
-            // 
-            // cbbCarton
-            // 
-            this.cbbCarton.BackColor = System.Drawing.Color.Lavender;
-            this.cbbCarton.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCarton.FormattingEnabled = true;
-            this.cbbCarton.Location = new System.Drawing.Point(267, 182);
-            this.cbbCarton.Name = "cbbCarton";
-            this.cbbCarton.Size = new System.Drawing.Size(671, 41);
-            this.cbbCarton.TabIndex = 2;
-            // 
             // lblTestCount
             // 
-            this.lblTestCount.Font = new System.Drawing.Font("Corbel", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestCount.Location = new System.Drawing.Point(33, 11);
+            this.lblTestCount.Font = new System.Drawing.Font("Corbel", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestCount.Location = new System.Drawing.Point(6, 23);
             this.lblTestCount.Name = "lblTestCount";
-            this.lblTestCount.Size = new System.Drawing.Size(184, 134);
+            this.lblTestCount.Size = new System.Drawing.Size(245, 167);
             this.lblTestCount.TabIndex = 0;
             this.lblTestCount.Text = "0";
             this.lblTestCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSkuScanData
+            // groupBox4
             // 
-            this.txtSkuScanData.BackColor = System.Drawing.Color.White;
-            this.txtSkuScanData.Location = new System.Drawing.Point(318, 240);
-            this.txtSkuScanData.Name = "txtSkuScanData";
-            this.txtSkuScanData.Size = new System.Drawing.Size(620, 40);
-            this.txtSkuScanData.TabIndex = 3;
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.lblMiddleBoxNumber);
+            this.groupBox4.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(23, 41);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(257, 205);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "MIDDLE BOX NUMBER";
             // 
-            // txtSerialScanData
+            // lblMiddleBoxNumber
             // 
-            this.txtSerialScanData.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSerialScanData.Location = new System.Drawing.Point(318, 289);
-            this.txtSerialScanData.Name = "txtSerialScanData";
-            this.txtSerialScanData.Size = new System.Drawing.Size(620, 40);
-            this.txtSerialScanData.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.textBox1.Location = new System.Drawing.Point(267, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(671, 40);
-            this.textBox1.TabIndex = 3;
+            this.lblMiddleBoxNumber.Font = new System.Drawing.Font("Corbel", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiddleBoxNumber.Location = new System.Drawing.Point(6, 23);
+            this.lblMiddleBoxNumber.Name = "lblMiddleBoxNumber";
+            this.lblMiddleBoxNumber.Size = new System.Drawing.Size(245, 167);
+            this.lblMiddleBoxNumber.TabIndex = 0;
+            this.lblMiddleBoxNumber.Text = "0";
+            this.lblMiddleBoxNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserControl_Scanning_New
             // 
@@ -404,12 +370,13 @@
             this.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UserControl_Scanning_New";
             this.Size = new System.Drawing.Size(1050, 738);
+            this.Load += new System.EventHandler(this.UserControl_Scanning_New_Load);
+            this.VisibleChanged += new System.EventHandler(this.UserControl_Scanning_New_VisibleChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -434,19 +401,16 @@
         private System.Windows.Forms.TextBox txtUnitPerCarton;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lblFail;
-        private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lblUnitBoxNumber;
+        private System.Windows.Forms.Label lblMiddleBoxNumber;
         private System.Windows.Forms.ComboBox cbbCarton;
         private System.Windows.Forms.ComboBox cbbMiddle;
         private System.Windows.Forms.ComboBox cbbMaster;
         private System.Windows.Forms.Label lblTestCount;
         private System.Windows.Forms.TextBox txtSerialScanData;
         private System.Windows.Forms.TextBox txtSkuScanData;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUnitBox;
+        private System.Windows.Forms.Button btnPassFail;
     }
 }

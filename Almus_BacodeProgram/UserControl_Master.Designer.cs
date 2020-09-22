@@ -176,7 +176,7 @@
             this.tabPage_BoxCode.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_BoxCode.Size = new System.Drawing.Size(848, 680);
             this.tabPage_BoxCode.TabIndex = 1;
-            this.tabPage_BoxCode.Text = "Box Code";
+            this.tabPage_BoxCode.Text = "Middle Code";
             this.tabPage_BoxCode.UseVisualStyleBackColor = true;
             // 
             // button_BoxDelete
@@ -258,7 +258,7 @@
             this.tabPage_LotCode.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_LotCode.Size = new System.Drawing.Size(848, 680);
             this.tabPage_LotCode.TabIndex = 2;
-            this.tabPage_LotCode.Text = "Lot Code";
+            this.tabPage_LotCode.Text = "Carton Code";
             this.tabPage_LotCode.UseVisualStyleBackColor = true;
             // 
             // button_LotDelete
