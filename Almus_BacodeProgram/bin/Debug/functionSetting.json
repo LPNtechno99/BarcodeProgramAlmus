@@ -1,5 +1,5 @@
-i{
-  "BOX_LOT_CODE": false,
+h{
+  "BOX_LOT_CODE": true,
   "DATABASE": false,
   "INSPECTION_INFO": false,
   "COUNT_SETUP": false

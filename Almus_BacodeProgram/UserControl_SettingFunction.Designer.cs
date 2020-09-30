@@ -60,9 +60,9 @@
             this.checkBox_BoxCode_LotCode.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_BoxCode_LotCode.Location = new System.Drawing.Point(67, 61);
             this.checkBox_BoxCode_LotCode.Name = "checkBox_BoxCode_LotCode";
-            this.checkBox_BoxCode_LotCode.Size = new System.Drawing.Size(502, 37);
+            this.checkBox_BoxCode_LotCode.Size = new System.Drawing.Size(579, 37);
             this.checkBox_BoxCode_LotCode.TabIndex = 0;
-            this.checkBox_BoxCode_LotCode.Text = "Except BoxCode and  Lot Code Function";
+            this.checkBox_BoxCode_LotCode.Text = "Except Middle Code and  Carton Code Function";
             this.checkBox_BoxCode_LotCode.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -133,7 +133,7 @@
             // 
             // button_Save
             // 
-            this.button_Save.BackColor = System.Drawing.Color.White;
+            this.button_Save.BackColor = System.Drawing.Color.Turquoise;
             this.button_Save.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.Location = new System.Drawing.Point(834, 653);
             this.button_Save.Name = "button_Save";

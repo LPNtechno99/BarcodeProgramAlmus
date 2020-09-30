@@ -70,6 +70,10 @@ namespace Almus_BacodeProgram
             dataGridView.Columns[9].Width = 80; //Sample_Tray
             dataGridView.Columns[10].Width = 80; //TrayNumber
             dataGridView.Columns[11].Width = 70; //TestCount
+
+            dataGridView.Columns[8].HeaderText = "Unit";
+            dataGridView.Columns[9].HeaderText = "Middle";
+            dataGridView.Columns[10].HeaderText = "Carton";
         }
 
         private void button_Search_Click(object sender, EventArgs e)

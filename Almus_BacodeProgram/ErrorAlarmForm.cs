@@ -79,13 +79,19 @@ namespace Almus_BacodeProgram
             if(isTest == true)
             {
                 errorInfo.Reason = this.textBox_NG_Reason.Text;
-
-                using (conn = new SQLiteConnection(connStr))
+                try
                 {
-                    conn.Open();
-                    testResult_CRUD = new BarcodeTestResult_CRUD(conn);
-                    testResult_CRUD.Insert(errorInfo);
-                    conn.Close();
+                    using (conn = new SQLiteConnection(connStr))
+                    {
+                        conn.Open();
+                        testResult_CRUD = new BarcodeTestResult_CRUD(conn);
+                        testResult_CRUD.Insert(errorInfo);
+                        conn.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -94,12 +100,19 @@ namespace Almus_BacodeProgram
                 errorInfo.Reason = this.textBox_NG_Reason.Text;
                 errorInfo.Reason += " + (Scan Box/Lot Error)";
 
-                using (conn = new SQLiteConnection(connStr))
+                try
                 {
-                    conn.Open();
-                    testResult_CRUD = new BarcodeTestResult_CRUD(conn);
-                    testResult_CRUD.Insert(errorInfo);
-                    conn.Close();
+                    using (conn = new SQLiteConnection(connStr))
+                    {
+                        conn.Open();
+                        testResult_CRUD = new BarcodeTestResult_CRUD(conn);
+                        testResult_CRUD.Insert(errorInfo);
+                        conn.Close();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
 
